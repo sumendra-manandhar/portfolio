@@ -516,6 +516,12 @@ input {
 }
 
 /*===== Skills Section =====*/
+
+.qualification__icon {
+  font-size: 2rem;
+  margin-right: var(--mb-0-75);
+}
+
 .skills__container {
   grid-template-columns: 360px 320px;
   column-gap: 3rem;
@@ -540,6 +546,62 @@ input {
 
 .skills__icon {
   margin-right: var(--mb-0-75);
+}
+
+.skills__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.skills__arrow {
+  margin-left: auto;
+}
+
+.skills__active .skills__arrow {
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.skills [data-content] {
+  display: none;
+}
+
+.skills__active[data-content] {
+  display: block;
+}
+
+.skills__list {
+  row-gap: 1.8rem;
+}
+
+.skills__titles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__bar,
+.skills__percentage {
+  height: 5px;
+  border-radius: 0.25rem;
+}
+
+.skills__bar {
+  background-color: var(--box-color);
+}
+
+.skills__percentage {
+  display: block;
+  background-color: var(--skin-color);
 }
 
 /*===== Work Section =====*/
