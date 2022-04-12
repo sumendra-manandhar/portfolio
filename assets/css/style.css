@@ -114,7 +114,7 @@ input {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 1250px;
+  max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -240,7 +240,8 @@ input {
 
 .home {
   background: url("../img/home-bg.jpg");
-  background-size: cover;
+
+  /* background-size: cover; */
 
   background-position: center center;
   height: 100vh;
@@ -289,6 +290,21 @@ input {
 
 .home__social-link:hover {
   transform: translateY(0.25rem);
+}
+
+.home__social-link:hover::after {
+  position: absolute;
+  content: "Facebook";
+  font-size: 40px;
+  font-weight: 800;
+
+  height: 200px;
+  width: 100px;
+  color: blue;
+  padding: 20px;
+  border-radius: 5px;
+  top: 10px;
+  opacity: 30%;
 }
 
 .home__img {
@@ -376,6 +392,59 @@ input {
 }
 
 /*===== About Section =====*/
+.about__container {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  align-items: center;
+}
+
+.about__img {
+  position: absolute;
+  top: 10px;
+  right: 0%;
+  /* 
+  width: 480px;
+  border-radius: 0.75rem;
+  justify-content: center; */
+}
+
+.about__heading {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.about__description {
+  text-align: justify;
+  padding-right: 6rem;
+  margin-bottom: var(--mb-2);
+}
+
+.about__info {
+  grid-template-columns: repeat(3, 150px);
+  column-gap: 0.5rem;
+  margin-bottom: var(--mb-3);
+}
+
+.about__box {
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--box-color);
+}
+
+.about__icon {
+  font-size: 1.5rem;
+  color: var(--skin-color);
+  margin-bottom: var(--mb-0-75);
+}
+
+.about__title {
+  font-size: var(--small-font-size);
+}
+
+.about__subtitle {
+  font-size: var(--smaller-font-size);
+}
 
 /*===== Qualification Section =====*/
 
