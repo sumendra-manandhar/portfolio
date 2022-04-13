@@ -17,6 +17,16 @@ if (navClose) {
     navMenu.classList.remove("show-sidebar");
   });
 }
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.getElementById(".nav_link");
+
+navLink.forEach((n) =>
+  n.addEventListener("click", () => {
+    navMenu.classList.remove("show-sidebar");
+  })
+);
+
 /*=============== SKILLS TABS ===============*/
 const tabs = document.querySelectorAll("[data-target]"),
   tabContent = document.querySelectorAll("[data-content]");
