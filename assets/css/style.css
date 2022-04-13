@@ -1041,6 +1041,7 @@ textarea.input {
 
   .nav__toggle {
     display: flex;
+    z-index: 1000;
   }
 
   .nav__close {
@@ -1073,7 +1074,7 @@ textarea.input {
   }
 
   .about__description {
-    padding: 0 4rem;
+    padding: 0 3rem;
     text-align: center;
   }
 
@@ -1110,6 +1111,11 @@ textarea.input {
     justify-content: center;
   }
 
+  .skills__container,
+  .contact__container {
+    row-gap: 3rem;
+  }
+
   .nav__toggle {
     right: inherit;
     left: 1.5rem;
@@ -1144,6 +1150,16 @@ textarea.input {
   .about__info {
     grid-template-columns: 300px;
     row-gap: 2rem;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  .about__img {
+    top: 10px;
+    z-index: -200;
+    opacity: 20%;
   }
 }
 
