@@ -27,6 +27,11 @@
 
   <body>
     <!--========== SIDEBAR ==========-->
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+
     <aside class="sidebar" id="sidebar">
       <nav class="nav">
         <div class="nav__logo">
@@ -37,7 +42,7 @@
           <div class="menu">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="" class="nav__link active-link">Home</a>
+                <a href="#home" class="nav__link active-link">Home</a>
               </li>
               <li class="nav__item">
                 <a href="#about" class="nav__link">About</a>
@@ -48,11 +53,11 @@
               <li class="nav__item">
                 <a href="#work" class="nav__link">Work</a>
               </li>
+              <!-- <li class="nav__item">
+                <a href="#Services" class="nav__link">Services</a>
+              </li> -->
               <li class="nav__item">
-                <a href="" class="nav__link">Services</a>
-              </li>
-              <li class="nav__item">
-                <a href="" class="nav__link">Contact</a>
+                <a href="#contact" class="nav__link">Contact</a>
               </li>
             </ul>
           </div>
@@ -60,6 +65,10 @@
 
         <div class="btn__share">
           <i class="uil uil-share-alt social__share"></i>
+        </div>
+
+        <div class="nav__close" id="nav-close">
+          <i class="uil uil-times"></i>
         </div>
       </nav>
     </aside>
@@ -72,23 +81,23 @@
             <span class="home__social-follow">Get in Touch</span>
             <div class="home__social-links">
               <a href="" target="_blank" class="home__social-link">
-                <i class="uil uil-facebook-f"></i>
+                <i class="uil uil-facebook-f" data-heading="facebook"></i>
               </a>
 
               <a href="" target="_blank" class="home__social-link">
-                <i class="uil uil-instagram"></i>
+                <i class="uil uil-instagram" data-heading="Instagram"></i>
               </a>
 
               <a href="" target="_blank" class="home__social-link">
-                <i class="uil uil-github"></i>
+                <i class="uil uil-github" data-heading="Github"></i>
               </a>
 
               <a href="" target="_blank" class="home__social-link">
-                <i class="uil uil-behance"></i>
+                <i class="uil uil-behance" data-heading="Behance"></i>
               </a>
 
               <a href="" target="_blank" class="home__social-link">
-                <i class="uil uil-linkedin"></i>
+                <i class="uil uil-linkedin" data-heading="Linkedin"></i>
               </a>
             </div>
           </div>
@@ -140,19 +149,18 @@
             </div>
           </div>
         </div>
+        <img src="assets/img/about-img.svg" alt="" class="about__img" />
       </section>
 
       <!--===== About =====-->
-      <section class="about section" id="about" style="position: relative">
+      <section class="about section" id="about">
         <h2 data-heading="My Intro" class="section__title">About Me</h2>
 
         <div class="about__container container grid">
-          <img src="assets/img/about-img.svg" alt="" class="about__img" />
+          <img src="assets/img/home-bg.svg" alt="" class="" />
 
           <div class="about__data">
-            <h3 class="about__heading">
-              Hi, I'm Sumendra Manandhar, Based in Nepal
-            </h3>
+            <h3 class="about__heading">Hi, I'm Sumendra Manandhar</h3>
             <p class="about__description">
               Web developer, with extensive knowledge and years of experience,
               working in web technologies and Ui/Ux design, delievering quality
@@ -244,11 +252,97 @@
             <div class="timeline">
               <div class="timeline__item">
                 <div class="circle__dot"></div>
-                <h3 class="timeline__title">Civil Bank Limited</h3>
-                <p class="timeline__text">Front End Developer</p>
+
                 <span class="timeline__date"
                   ><i class="bx bx-calendar-event"></i>
-                  2013 - Present
+                  2021 - Present
+                </span>
+                <h3 class="timeline__title">Civil Bank Limited</h3>
+                <span class="timeline__text">Frontend Developer</span>
+                <hr style="width: 30%; margin-bottom: 5px" />
+                <span class="timeline__text">
+                  <ul style="list-style-type: circle">
+                    <li>
+                      Develop, maintain and implement in-house website based
+                      project and .NET web application .
+                    </li>
+
+                    <li>
+                      Frontend optimization, developement, testing and bug
+                      fixation.
+                    </li>
+                    <li>
+                      Create UI/UX design and mockup for the bank mobile app.
+                    </li>
+                  </ul>
+                </span>
+              </div>
+
+              <div class="timeline__item">
+                <div class="circle__dot"></div>
+
+                <span class="timeline__date"
+                  ><i class="bx bx-calendar-event"></i>
+                  August,2019 - October,2020
+                </span>
+                <h3 class="timeline__title">Magic Prints Pvt. Ltd</h3>
+                <span class="timeline__text">Senior Media Manager</span>
+                <hr style="width: 30%; margin-bottom: 5px" />
+                <span class="timeline__text">
+                  <ul style="list-style-type: circle">
+                    <li>
+                      Design and develop new artwork realted to production base
+                      using CoralDraw / Illustrator / AfterEffect.
+                    </li>
+                    <li>
+                      UI/UX design using figma and other prototyping tools.
+                    </li>
+                    <li>
+                      Manage the Social Media pages and increase productivity.
+                    </li>
+                  </ul>
+                </span>
+              </div>
+              <div class="timeline__item">
+                <div class="circle__dot"></div>
+
+                <span class="timeline__date"
+                  ><i class="bx bx-calendar-event"></i>
+                  06/2018 - 05/2019
+                </span>
+                <h3 class="timeline__title">KTM Techies Pvt. Ltd</h3>
+                <span class="timeline__text">Web Developer</span>
+                <hr style="width: 30%; margin-bottom: 5px" />
+                <span class="timeline__text">
+                  <ul style="list-style-type: circle">
+                    <li>Design and develop Wordpress website</li>
+                    <li>
+                      Participate in system design, development of reusable
+                      website components.
+                    </li>
+                    <li>Create, maintain and modify content in the website.</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- achievement section  -->
+
+          <div class="achievement">
+            <h3 class="qualification__title">
+              <i class="bx bxs-briefcase-alt-2 qualification__icon"></i
+              >Achievement
+            </h3>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="circle__dot"></div>
+                <span class="timeline__text">Web Desining Course</span>
+                <span class="timeline__text">APTECH Institute</span>
+                <span class="timeline__date"
+                  ><i class="bx bx-calendar-event"></i>
+                  2013
                 </span>
               </div>
 
@@ -277,7 +371,7 @@
       </section>
 
       <!--===== Skills =====-->
-      <section class="skills section" id="skills">
+      <section class="skills section">
         <h2 data-heading="My Abilities" class="section__title">
           My Experience
         </h2>
@@ -475,15 +569,15 @@
         <div class="work__container container grid">
           <div class="work__card mix web">
             <img src="assets/img/work-1.webp" alt="" class="work__img" />
-            <h3 class="work__title">Web Design</h3>
+            <h3 class="work__title">web1</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">Card</h3>
+              <h3 class="details__title">Card 1</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
                 pariatur dolores itaque soluta, natus culpa amet earum officia
                 unde quod recusandae praesentium vel, dolor, ut eum id laborum
                 quos ducimus.
@@ -491,7 +585,7 @@
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>frontend 1</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -500,16 +594,16 @@
           </div>
 
           <div class="work__card mix web">
-            <img src="assets/img/work-1.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+            <img src="assets/img/work-2.webp" alt="" class="work__img" />
+            <h3 class="work__title">web 2</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title">Website</h3>
+              <h3 class="details__title">Website 2</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
                 pariatur dolores itaque soluta, natus culpa amet earum officia
                 unde quod recusandae praesentium vel, dolor, ut eum id laborum
                 quos ducimus.
@@ -517,7 +611,7 @@
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>frontend 2</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -526,16 +620,16 @@
           </div>
 
           <div class="work__card mix app">
-            <img src="assets/img/work-2.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+            <img src="assets/img/work-3.webp" alt="" class="work__img" />
+            <h3 class="work__title">title app1</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title"></h3>
+              <h3 class="details__title">App 1</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
                 pariatur dolores itaque soluta, natus culpa amet earum officia
                 unde quod recusandae praesentium vel, dolor, ut eum id laborum
                 quos ducimus.
@@ -543,7 +637,7 @@
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>app 1</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -552,16 +646,16 @@
           </div>
 
           <div class="work__card mix design">
-            <img src="assets/img/work-3.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+            <img src="assets/img/work-4.webp" alt="" class="work__img" />
+            <h3 class="work__title">title deisgn 1</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title"></h3>
+              <h3 class="details__title">Design 1</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
                 pariatur dolores itaque soluta, natus culpa amet earum officia
                 unde quod recusandae praesentium vel, dolor, ut eum id laborum
                 quos ducimus.
@@ -569,7 +663,7 @@
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>desihgn</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -578,16 +672,16 @@
           </div>
 
           <div class="work__card mix app">
-            <img src="assets/img/work-4.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+            <img src="assets/img/work-5.webp" alt="" class="work__img" />
+            <h3 class="work__title">title app</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title"></h3>
+              <h3 class="details__title">title app 2</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
                 pariatur dolores itaque soluta, natus culpa amet earum officia
                 unde quod recusandae praesentium vel, dolor, ut eum id laborum
                 quos ducimus.
@@ -595,7 +689,7 @@
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>frontebd 222</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -604,24 +698,24 @@
           </div>
 
           <div class="work__card mix web">
-            <img src="assets/img/work-5.webp" alt="" class="work__img" />
-            <h3 class="work__title"></h3>
+            <img src="assets/img/work-6.webp" alt="" class="work__img" />
+            <h3 class="work__title">title web</h3>
             <span class="work__button"
               >Demo
               <i class="bx bx-chevron-right work__button-icon"></i>
             </span>
             <div class="portfolio__item-details">
-              <h3 class="details__title"></h3>
+              <h3 class="details__title">wedfssdf</h3>
               <p class="details__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-                pariatur dolores itaque soluta, natus culpa amet earum officia
-                unde quod recusandae praesentium vel, dolor, ut eum id laborum
-                quos ducimus.
+                12132Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quo pariatur dolores itaque soluta, natus culpa amet earum
+                officia unde quod recusandae praesentium vel, dolor, ut eum id
+                laborum quos ducimus.
               </p>
               <ul class="details__info">
                 <li>Created - <span> 4 Dec 2020</span></li>
                 <li>technologies - <span>html css</span></li>
-                <li>Role - <span>frontebd</span></li>
+                <li>Role - <span>fronteb312 d</span></li>
                 <li>
                   View - <span> <a href="#">www.domain.com</a></span>
                 </li>
@@ -633,11 +727,120 @@
 
       <!-- Portfolio Popup -->
 
+      <div class="portfolio__popup">
+        <div class="portfolio__popup-inner">
+          <div class="portfolio__popup-content grid">
+            <span class="portfolio__popup-close"
+              ><i class="bx bx-log-out-circle"></i
+            ></span>
+            <div class="pp__thumbnail">
+              <img
+                src="assets/img/work-2.webp"
+                alt=""
+                class="portfolio__popup-img"
+              />
+            </div>
+            <div class="portfolio__popup-info">
+              <div class="portfolio__popup-subtitle">
+                Featured - <span>Design</span>
+              </div>
+              <div class="portfolio_popup-body">
+                <h3 class="details__title">Website 2</h3>
+                <p class="details__description">
+                  2. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quo pariatur dolores itaque soluta, natus culpa amet earum
+                  officia unde quod recusandae praesentium vel, dolor, ut eum id
+                  laborum quos ducimus.
+                </p>
+                <ul class="details__info">
+                  <li>Created - <span> 4 Dec 2020</span></li>
+                  <li>technologies - <span>html css</span></li>
+                  <li>Role - <span>frontend 2</span></li>
+                  <li>
+                    View - <span> <a href="#">www.domain.com</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--===== Services =====-->
 
       <!--===== Testimonials =====-->
 
       <!--===== Contact =====-->
+      <section class="contact section" id="contact">
+        <h2 data-heading="Get in touch" class="section__title">Contact Me</h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__content">
+            <div class="contact__info">
+              <div class="contact__card">
+                <i class="uil uil-envelope-edit contact__card-icon"></i>
+                <h3 class="contact__card-title">Email</h3>
+                <span class="contact__card-data">thesume.2010@gmail.com</span>
+                <span class="contact__button">
+                  Write me<i
+                    class="uil uil-arrow-right contact__button-icon"
+                  ></i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="uil uil-whatsapp contact__card-icon"></i>
+                <h3 class="contact__card-title">Whatsapp</h3>
+                <span class="contact__card-data">9849331064</span>
+                <span class="contact__button">
+                  Write me<i
+                    class="uil uil-arrow-right contact__button-icon"
+                  ></i>
+                </span>
+              </div>
+
+              <div class="contact__card">
+                <i class="uil uil-facebook-messenger contact__card-icon"></i>
+                <h3 class="contact__card-title">Messenger</h3>
+                <span class="contact__card-data">sumendra.manandhar</span>
+                <span class="contact__button">
+                  Write me<i
+                    class="uil uil-arrow-right contact__button-icon"
+                  ></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact__content">
+            <form action="" class="contact__form">
+              <div class="input__container">
+                <input type="text" class="input" />
+                <label for="">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="input__container">
+                <input type="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input__container">
+                <input type="tel" class="input" />
+                <label for="">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input__container textarea">
+                <textarea name="" id="" class="input"></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+              </div>
+              <button type="submit" class="button">
+                <i class="uil uil-navigator button__icon"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
       <!--===== FOOTER =====-->
     </main>

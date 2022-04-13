@@ -34,7 +34,12 @@ let mixerPortfolio = mixitup(".work__container", {
     target: ".work__card",
   },
   animation: {
-    duration: 300,
+    // effects: "rotateY(-25deg)",
+    // perspectiveDistance: "2000px",
+
+    effects: "fade translateZ(-300px)",
+
+    // duration: 500,
   },
 });
 /*===== Link Active Work =====*/
@@ -48,13 +53,80 @@ function activeWork() {
 linkWork.forEach((l) => l.addEventListener("click", activeWork));
 
 /*===== Work Popup =====*/
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("work__button")) {
+    togglePortfolioPopup();
+    portfolioItemDetails(e.target.parentElement);
+  }
+});
 
+function togglePortfolioPopup() {
+  document.querySelector(".portfolio__popup").classList.toggle("open");
+}
+
+document
+  .querySelector(".portfolio__popup-close")
+  .addEventListener("click", togglePortfolioPopup);
+
+function portfolioItemDetails(portfolioItem) {
+  document.querySelector(".pp__thumbnail img").src =
+    portfolioItem.querySelector(".work__img").src;
+
+  document.querySelector(".portfolio__popup-subtitle span").innerHTML =
+    portfolioItem.querySelector(".work__title").innerHTML;
+
+  document.querySelector(".portfolio__popup-body").innerHTML =
+    portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+}
 /*=============== SERVICES MODAL ===============*/
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 /*=============== INPUT ANIMATION ===============*/
+// const inputs = document.querySelector(".input");
+
+// function focusFunc() {
+//   let parent = this.parentNode;
+//   parent.classList.add("focus");
+// }
+
+// function blurFunc() {
+//   let parent = this.parentNode;
+//   if (this.value == "") {
+//     parent.classList.remove("focus");
+//   }
+// }
+
+// inputs.forEach((input) => {
+//   input.addEventListener("focus", focusFunc);
+//   input.addEventListener("blur", blurFunc);
+// });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+const sections = document.querySelectorAll("section[id]");
+console.log(sections);
+
+window.addEventListener("scroll", navHighlighter);
+
+function navHighlighter() {
+  let scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
 
 /*=============== SHOW SCROLL UP ===============*/
