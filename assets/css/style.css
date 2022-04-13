@@ -1148,7 +1148,12 @@ textarea.input {
 
 /* For Small Devices */
 @media screen and (max-width: 350px) {
-  .qualification__container {
-    grid-template-columns: repeat(200px);
+  .qualification__container,
+  .skills__container,
+  .contact__container,
+  .work__container {
+    grid-template-columns: 300px;
+
+    justify-content: center;
   }
 }
