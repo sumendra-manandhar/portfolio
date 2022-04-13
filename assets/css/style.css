@@ -1132,6 +1132,18 @@ textarea.input {
   .home__img {
     display: none;
   }
+
+  .portfolio__popup-content {
+    grid-template-columns: 300px;
+  }
+
+  .portfolio__popup-img {
+    width: 150px;
+  }
+  .about__info {
+    grid-template-columns: 300px;
+    row-gap: 2rem;
+  }
 }
 
 /* For Small Devices */
