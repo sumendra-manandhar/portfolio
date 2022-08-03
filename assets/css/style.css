@@ -993,8 +993,8 @@ textarea.input {
 
   .work__container,
   .qualification__container {
-    grid-template-columns: repeat(2, 330px);
-    gap: 3rem;
+    grid-template-columns: repeat(2, 2500px);
+    gap: 2rem;
   }
 }
 
